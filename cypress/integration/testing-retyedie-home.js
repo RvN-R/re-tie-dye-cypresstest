@@ -5,6 +5,10 @@ context("Testing Re Tie Dye Home page", () => {
         cy.visit("/index.html")
     })
 
+    it("Locating home page logo", ()=>{
+        cy.get('.re-tie-dye-logo').should("exist")
+    })
+
     it("Locating main h3 on Home Page", () => {
         cy.get("h3").contains("So, how does this work?")
     })
@@ -22,4 +26,6 @@ context("Testing Re Tie Dye Home page", () => {
         cy.url().should('include', 'http://localhost:55958/shop.html')
         
     })
+
+    
 })
